@@ -1,0 +1,12 @@
+# GoatSauce TODO
+
+- Inspect `ho`, `hb`, `gZ` for I/O entry points (decompress/write vs read).
+- Trace where `.hg` bytes are read from disk and fed to jpountz.
+- Produce a Rust reproducer using `lz4_flex` for frame/raw support.
+- Round-trip test: read `.hg` -> decompress -> parse with `ff` logic -> modify small field -> recompress -> verify in-game.
+- De-obfuscate single-letter classes (fuck you, `hb.java`).
+- Find where GoatSauce duct-taped jpountz instead of writing real code.
+- Replace GoatSauce’s cursed JSON parser (`ff.java`) with literally anything sane.
+- Audit compression wrappers (`ho`, `hb`, `gZ`) a.k.a. the Holy Trinity of Nope.
+- Count how many classes start with `f` before I lose my will to live.
+- Rust rewrite: because GoatSauce clearly couldn’t handle memory safety.
